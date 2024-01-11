@@ -60,7 +60,8 @@ Your app have to satisfy requirements of 4 HTTP requests described below:
 - request: `GET /recommendation`
 - response body for success: JSON in form of object `{ "coffeeType": "recommended coffee type" }`
   - HTTP status for success: `200 OK`
-- response body for empty result: JSON in form of object `{ "message": "NO_RECOMMENDATIONS_AVAILABLE" }`
+- response body for empty result: JSON in form of object
+  `{ "message": "NO_RECOMMENDATIONS_AVAILABLE" }`
   - HTTP status for empty result: `200 OK`
 - business logic:
   - recommended coffee type is calculated based on most recent ratings only (e.g. if `coffee A` was
@@ -72,11 +73,12 @@ Your app have to satisfy requirements of 4 HTTP requests described below:
   - then only coffee types rated with 4 stars or more (`"4/5"` and `"5/5"`) are considered good
     enough to be recommended
   - then the one of them rated oldest is recommended
-  - and if there is no such coffee type, response body with `message` of value `NO_RECOMMENDATIONS_AVAILABLE` is returned
+  - and if there is no such coffee type, response body with `message` of value
+    `NO_RECOMMENDATIONS_AVAILABLE` is returned
 
 ## Setup
 
-This app was originally created with Node.js 10.14.1 / npm 6.4.1. You can use
+This app was originally created with Node.js 20.11.0 / npm 10.2.4. You can use
 [nvm](https://github.com/creationix/nvm) to make sure you work with the same version of Node.js –
 run `nvm install` and nvm will set up Node.js based on `.nvmrc` file.
 
